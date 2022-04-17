@@ -8,19 +8,19 @@ const Footer = () => {
     
     return (
         <>
-            <footer class="page-footer  cyan darken-3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col l6 s12">
-                            <h5 class="white-text">News Content</h5>
-                            <p class="grey-text text-lighten-4">Can you read about news in Colombia</p>
+            <footer className="page-footer  cyan darken-3">
+                <div className="container">
+                    <div className="row">
+                        <div className="col l6 s12">
+                            <h5 className="white-text">News Content</h5>
+                            <p className="grey-text text-lighten-4">Can you read about news in Colombia</p>
                         </div>
-                        <div class="col l4 offset-l2 s12">                      
+                        <div className="col l4 offset-l2 s12">                      
                         </div>
                     </div>
                 </div>
-                <div class="footer-copyright">
-                    <div class="container">
+                <div className="footer-copyright">
+                    <div className="container">
                         © {date.getFullYear()}
                     </div>
                 </div>

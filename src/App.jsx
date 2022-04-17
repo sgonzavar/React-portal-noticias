@@ -1,6 +1,8 @@
 import React from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import ListNews from './components/ListNews'
+import Form from './components/Form'
 
 class App extends React.Component {
 
@@ -26,8 +28,11 @@ class App extends React.Component {
     return (
       <>
         <Header title={'React News API'} />
-        App
-        <Footer />
+        <div className="container white container-news">
+          <ListNews articles={this.state.news} />
+          <Form findNews={this.findNews} />
+          {/* <Footer /> */}
+        </div>
       </>
     )
   }
