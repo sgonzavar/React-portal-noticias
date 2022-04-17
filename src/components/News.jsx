@@ -7,7 +7,6 @@ const News = ({ article }) => {
   const { urlToImage, url, title, description, source } = article;
 
   // condicionalmente cargar la imagen si esta disponible
-
   const imagen = (urlToImage) ?
     <div className="card-image">
       <img src={urlToImage} alt={title} />

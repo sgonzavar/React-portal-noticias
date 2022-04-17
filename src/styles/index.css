@@ -5,7 +5,7 @@ body {
 }
 
 body {
-  background-color: #ffffff90;
+  background-color: #039be5;
 }
 .card-content h3 {
   font-size: 1.4rem;
@@ -14,11 +14,10 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-.container-news {
+.contenedor-noticias {
   padding: 2rem;
   border-radius: 1rem;  
   margin-top: 3rem;
-  border: 1px solid #00838f;
 }
 
 .buscador {
