@@ -1,41 +1,46 @@
-import React from 'react'
-import Header from './components/Header'
-// import Footer from './components/Footer'
-import ListNews from './components/ListNews'
-import Form from './components/Form'
+import React from 'react';
+import Header from './components/Header';
+import ListNews from './components/ListNews';
+import FormNews from './components/FormNews';
 
 class App extends React.Component {
-
-  state = {
+  state = { 
     news: []
-  }
+   }
 
   componentDidMount() {
     this.findNews();
   }
-  
-  findNews = async (categoria = 'general') => {    
-    const url = `https://newsapi.org/v2/top-headlines?country=co&category=${categoria}&apiKey=1ba6ab5418ec495aa96deb39f1bb7bce`;
-    const resp = await fetch(url);
-    const news = await resp.json();
-  
-    this.setState({
-      news: news.articles
-    });
+
+  findNews = async  (category = 'general') => {
+      const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=1ba6ab5418ec495aa96deb39f1bb7bce`;
+      const resp = await fetch(url);
+      const news = await resp.json();
+
+      this.setState({
+        news : news.articles
+      })
   }
 
-  render() {
-    return (
-      <>
-        <Header title={'React News API'} />
-        <div className="container white contenedor-noticias">
-          <Form findNews={this.findNews} />
-          <ListNews articles={this.state.news} />
-          {/* <Footer /> */}
-        </div>
-      </>
-    )
+  render() { 
+    return ( 
+        <>
+            <Header 
+                title='news React API'
+            />
+
+            <div className="container white contenedor-news ">
+                <FormNews 
+                  findNews={this.findNews}
+                />
+
+                <ListNews 
+                  articles={this.state.news}
+                />
+            </div>
+        </>
+    );
   }
 }
-
-export default App
+ 
+export default App;

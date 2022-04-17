@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class Form extends React.Component {
+class FormNews extends React.Component {
     state = { 
         category : 'general'
     }
 
-    changeCategory = event => {
+    changeCategory = e => {
         this.setState({
-            category: event.target.value
-        },() => {
+            category : e.target.value
+        }, () => {
             // Pasarlo al app
             this.props.findNews(this.state.category);
         });
@@ -41,9 +41,8 @@ class Form extends React.Component {
         );
     }
 }
-
-Form.propTypes = {
-    findNews : PropTypes.func.isRequired
+FormNews.propTypes = {
+    consultarNoticias : PropTypes.func.isRequired
 }
-
-export default Form
+ 
+export default FormNews;
